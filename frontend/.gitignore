@@ -1,0 +1,28 @@
+# Node.js dependencies (frontend)
+node_modules/
+*.log
+npm-debug.log*
+
+# Python virtual environment (backend)
+backend/venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Build output
+frontend/build/
+frontend/dist/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Environment variables
+.env

@@ -1,0 +1,330 @@
+ /* frontend/src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.App.day {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  color: #1A3C34;
+}
+
+.App.night {
+  background: linear-gradient(135deg, #1C2526 0%, #2E3A59 100%);
+  color: #E0E0E0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in;
+}
+
+.theme-switcher {
+  text-align: right;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.theme-icon {
+  font-size: 1.8em;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.theme-icon:hover {
+  transform: scale(1.2);
+}
+
+.App.day .theme-icon {
+  color: #FFD700;
+}
+
+.App.night .theme-icon {
+  color: #C0C0C0;
+}
+
+.theme-icon.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.theme-switcher select {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0288D1;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.theme-switcher select:hover {
+  background-color: #0277BD;
+}
+
+.form-container {
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  animation: slideUp 0.5s ease-out;
+}
+
+.App.day .form-container {
+  background: #FFFFFF;
+}
+
+.App.night .form-container {
+  background: #2D2D2D;
+}
+
+form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #B0BEC5;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 400;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #0288D1;
+  outline: none;
+}
+
+.App.night input, .App.night select {
+  background: #424242;
+  color: #E0E0E0;
+  border-color: #616161;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.App.day button {
+  background: linear-gradient(90deg, #0288D1, #0277BD);
+  color: #FFFFFF;
+}
+
+.App.night button {
+  background: linear-gradient(90deg, #5C6BC0, #3F51B5);
+  color: #E0E0E0;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.App.day button:hover {
+  background: linear-gradient(90deg, #0277BD, #02669D);
+}
+
+.App.night button:hover {
+  background: linear-gradient(90deg, #3F51B5, #3949AB);
+}
+
+.card {
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.7s ease-in;
+  overflow: hidden; /* Prevent overflow */
+  position: relative;
+}
+
+.App.day .card {
+  background: #FFFFFF;
+}
+
+.App.night .card {
+  background: #2D2D2D;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.App.day .card h2 {
+  border-bottom: 2px solid #0288D1;
+}
+
+.App.night .card h2 {
+  border-bottom: 2px solid #5C6BC0;
+}
+
+.summary p, .transactions li {
+  font-size: 1.1em;
+  margin: 8px 0;
+  font-weight: 400;
+}
+
+.transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #B0BEC5;
+  transition: background 0.3s;
+}
+
+.App.day .transactions li:hover {
+  background: #F5F5F5;
+}
+
+.App.night .transactions li:hover {
+  background: #424242;
+}
+
+.App.day .transactions li {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.App.night .transactions li {
+  border-bottom: 1px solid #616161;
+}
+
+.transactions button {
+  padding: 8px 15px;
+}
+
+.App.day .transactions button {
+  background: #D32F2F;
+  color: white;
+}
+
+.App.night .transactions button {
+  background: #B71C1C;
+  color: #E0E0E0;
+}
+
+.transactions button:hover {
+  background: #C62828;
+}
+
+.trend {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.App.day .trend.upward {
+  background: #4CAF50;
+  color: white;
+}
+
+.App.night .trend.upward {
+  background: #388E3C;
+  color: white;
+}
+
+.App.day .trend.downward {
+  background: #D32F2F;
+  color: white;
+}
+
+.App.night .trend.downward {
+  background: #B71C1C;
+  color: white;
+}
+
+.App.day .trend.balanced-growth {
+  background: #FFB300;
+  color: #333;
+}
+
+.App.night .trend.balanced-growth {
+  background: #FFA000;
+  color: #E0E0E0;
+}
+
+.chart {
+  width: 100%;
+  max-width: 400px; /* Maximum width to fit within card */
+  height: 300px; /* Fixed height for bar chart */
+  margin: 0 auto; /* Center the chart */
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px; /* Match the chart height */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  animation: rotateIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+  from { transform: rotate(-10deg); opacity: 0; }
+  to { transform: rotate(0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+  }
+  .theme-switcher {
+    justify-content: center;
+  }
+  .chart {
+    max-width: 300px; /* Smaller size on mobile */
+    height: 250px;
+  }
+  .chart-container {
+    height: 250px; /* Match the chart height */
+  }
+}
